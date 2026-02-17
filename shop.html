@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - KCV CREAM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kcv-gold': '#D4AF37',
+                        'kcv-cream': '#FAF3E0',
+                        'kcv-dark': '#1A1A1A',
+                        'kcv-accent': '#C5A028',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-kcv-dark bg-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold text-kcv-gold">KCV</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-kcv-gold transition">Home</a>
+                <a href="shop.html" class="text-kcv-gold font-bold transition">Shop</a>
+                <a href="about.html" class="hover:text-kcv-gold transition">About</a>
+                <a href="contact.html" class="hover:text-kcv-gold transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-kcv-dark focus:outline-none" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-b absolute w-full" id="mobile-menu">
+            <div class="flex flex-col p-4 space-y-4 text-center">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="text-kcv-gold">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Product Image -->
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="relative group">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="KCV Cream"
+                            class="w-full rounded-2xl shadow-xl transition transform group-hover:scale-105 duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 mt-6">
+                        <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=200&h=200&q=80"
+                            class="rounded-lg cursor-pointer hover:border-2 hover:border-kcv-gold transition opacity-80 hover:opacity-100">
+                        <img src="https://images.unsplash.com/photo-1556228720-19150ea3bb73?auto=format&fit=crop&w=200&h=200&q=80"
+                            class="rounded-lg cursor-pointer hover:border-2 hover:border-kcv-gold transition opacity-80 hover:opacity-100">
+                        <img src="https://images.unsplash.com/photo-1571781565036-d3f7527f636b?auto=format&fit=crop&w=200&h=200&q=80"
+                            class="rounded-lg cursor-pointer hover:border-2 hover:border-kcv-gold transition opacity-80 hover:opacity-100">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <div
+                        class="inline-block bg-kcv-gold text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider mb-4">
+                        BEST SELLER</div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-kcv-dark mb-4">KCV Golden Radiance Cream
+                    </h1>
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-kcv-gold">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-gray-500 ml-2 text-sm">(128 Reviews)</span>
+                    </div>
+                    <p class="text-3xl text-kcv-gold font-serif font-bold mb-6">$49.99</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        A luxurious blend of saffron, sandalwood, and bioactive gold flakes. Designed to brighten, firm,
+                        and hydrate your skin overnight. Lightweight yet deeply nourishing.
+                    </p>
+
+                    <!-- Quantity -->
+                    <div class="flex items-center mb-8">
+                        <span class="mr-4 font-semibold">Quantity:</span>
+                        <div class="flex items-center border border-gray-300 rounded-lg">
+                            <button class="px-3 py-1 text-gray-600 hover:text-kcv-gold focus:outline-none"
+                                onclick="decreaseQty()">-</button>
+                            <input type="text" id="qty" value="1"
+                                class="w-10 text-center border-none focus:outline-none text-gray-700 font-semibold bg-transparent"
+                                readonly>
+                            <button class="px-3 py-1 text-gray-600 hover:text-kcv-gold focus:outline-none"
+                                onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex gap-4 mb-8">
+                        <button
+                            class="flex-1 bg-kcv-gold text-white py-4 rounded-full font-bold hover:bg-kcv-accent transition shadow-lg transform active:scale-95"
+                            onclick="addToCart()">
+                            Add to Cart
+                        </button>
+                        <button
+                            class="w-14 h-14 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50 transition text-red-500">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="border-t border-gray-200 py-6">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                <span> Ingredients</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+                                Aqua, Saffron Extract (Crocus Sativus), Sandalwood Oil, 24k Gold Flakes, Shea Butter,
+                                Vitamin E, Aloe Vera Gel.
+                            </p>
+                        </details>
+                    </div>
+                    <div class="border-t border-gray-200 py-6">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                <span> How to Use</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+                                Apply a pea-sized amount to clean face and neck. Massage gently in upward circular
+                                motions. Use daily in the morning and evening for best results.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-sm text-gray-400">
+            <p>&copy; 2024 KCV Cream. Unveil your beauty.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Quantity Logic
+        const qtyInput = document.getElementById('qty');
+        function increaseQty() {
+            let val = parseInt(qtyInput.value);
+            qtyInput.value = val + 1;
+        }
+        function decreaseQty() {
+            let val = parseInt(qtyInput.value);
+            if (val > 1) qtyInput.value = val - 1;
+        }
+
+        // Add to Cart
+        function addToCart() {
+            const btn = document.querySelector('button[onclick="addToCart()"]');
+            const originalText = btn.innerText;
+            btn.innerText = "Added!";
+            btn.classList.add('bg-green-600', 'text-white');
+            btn.classList.remove('bg-kcv-gold');
+
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('bg-green-600');
+                btn.classList.add('bg-kcv-gold');
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

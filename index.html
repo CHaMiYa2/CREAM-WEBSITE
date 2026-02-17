@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCV CREAM - Unlock Your Radiance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kcv-gold': '#D4AF37',
+                        'kcv-cream': '#FAF3E0',
+                        'kcv-dark': '#1A1A1A',
+                        'kcv-accent': '#C5A028',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        .btn-shine:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans text-kcv-dark bg-kcv-cream overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold text-kcv-gold tracking-widest">KCV</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-kcv-dark hover:text-kcv-gold transition font-medium">Home</a>
+                <a href="shop.html" class="text-kcv-dark hover:text-kcv-gold transition font-medium">Shop</a>
+                <a href="about.html" class="text-kcv-dark hover:text-kcv-gold transition font-medium">About</a>
+                <a href="contact.html" class="text-kcv-dark hover:text-kcv-gold transition font-medium">Contact</a>
+            </div>
+            <a href="shop.html" class="bg-kcv-gold text-white px-6 py-2 rounded-full hover:bg-kcv-accent transition btn-shine hidden md:block">
+                Buy Now
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-kcv-dark focus:outline-none" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white/95 backdrop-blur-md absolute w-full left-0 border-b border-gray-100" id="mobile-menu">
+            <div class="flex flex-col p-6 space-y-4 text-center">
+                <a href="index.html" class="text-kcv-dark hover:text-kcv-gold font-medium">Home</a>
+                <a href="shop.html" class="text-kcv-dark hover:text-kcv-gold font-medium">Shop</a>
+                <a href="about.html" class="text-kcv-dark hover:text-kcv-gold font-medium">About</a>
+                <a href="contact.html" class="text-kcv-dark hover:text-kcv-gold font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+        
+        <div class="relative container mx-auto px-6 text-center z-10" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 text-glow tracking-wide">
+                KCV CREAM
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                Experience the golden touch of luxury. Transform your skin with nature's finest ingredients.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="shop.html" class="bg-kcv-gold text-white px-8 py-4 rounded-full text-lg hover:bg-kcv-accent transition transform hover:scale-105 btn-shine shadow-lg">
+                    Shop Collection
+                </a>
+                <a href="about.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg hover:bg-white hover:text-kcv-gold transition transform hover:scale-105 shadow-lg">
+                    Our Story
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-serif font-bold text-kcv-dark mb-4">Why KCV Cream?</h2>
+                <div class="w-24 h-1 bg-kcv-gold mx-auto"></div>
+                <p class="mt-4 text-gray-600">The ultimate blend of science and nature.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="text-center p-8 rounded-2xl bg-kcv-cream hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-kcv-gold shadow-md">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Instant Glow</h3>
+                    <p class="text-gray-600">Visible radiance from the very first application, giving you that golden hour look all day.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-8 rounded-2xl bg-kcv-cream hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-kcv-gold shadow-md">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Natural Formula</h3>
+                    <p class="text-gray-600">100% organic ingredients sourced from the finest farms. No harsh chemicals.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-8 rounded-2xl bg-kcv-cream hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-kcv-gold shadow-md">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Dermatologist Tested</h3>
+                    <p class="text-gray-600">Safe for all skin types, ensuring a gentle yet effective treatment for your beauty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="py-20 bg-kcv-cream relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <!-- Fallback Image from Unsplash -->
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="KCV Cream Jar" class="rounded-3xl shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition duration-500 border-4 border-white">
+            </div>
+            <div class="md:w-1/2 md:pl-16" data-aos="fade-left">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-kcv-dark mb-6">The Golden Standard</h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    KCV Cream isn't just a moisturizer; it's a daily ritual. Infused with rare botanical extracts and gold particles, it deeply hydrates while illuminating your complexion.
+                </p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 text-kcv-gold mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span class="text-gray-800">24-Hour Hydration</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 text-kcv-gold mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span class="text-gray-800">Anti-Aging Properties</span>
+                    </div>
+                </div>
+                <a href="shop.html" class="inline-block bg-kcv-dark text-white px-8 py-3 rounded-full hover:bg-kcv-gold transition btn-shine">
+                    Purchase KCV Cream - $49.99
+                </a>
+            </div>
+        </div>
+        <!-- Decorative Circle -->
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-kcv-gold opacity-10 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-serif font-bold text-kcv-dark mb-16" data-aos="fade-up">Loved by Thousands</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-gray-50 rounded-xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-kcv-gold text-4xl mb-4">"</div>
+                    <p class="text-gray-600 mb-6 italic">Incredible results! My skin has never felt this soft. KCV Cream is now a permanent part of my routine.</p>
+                    <div class="flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&h=100&q=80" class="w-12 h-12 rounded-full mr-4 border-2 border-kcv-gold">
+                        <div class="text-left">
+                            <h4 class="font-bold text-sm">Sarah Jenkins</h4>
+                            <span class="text-xs text-gray-500">Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-kcv-gold text-4xl mb-4">"</div>
+                    <p class="text-gray-600 mb-6 italic">The packaging is beautiful, but the product is even better. It smells divine and works wonders.</p>
+                    <div class="flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&h=100&q=80" class="w-12 h-12 rounded-full mr-4 border-2 border-kcv-gold">
+                        <div class="text-left">
+                            <h4 class="font-bold text-sm">Emma Watson</h4>
+                            <span class="text-xs text-gray-500">Beauty Blogger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-kcv-gold text-4xl mb-4">"</div>
+                    <p class="text-gray-600 mb-6 italic">Worth every rupee. KCV Cream gives me that confident glow before every photoshoot.</p>
+                    <div class="flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" class="w-12 h-12 rounded-full mr-4 border-2 border-kcv-gold">
+                        <div class="text-left">
+                            <h4 class="font-bold text-sm">Priya Sharma</h4>
+                            <span class="text-xs text-gray-500">Model</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-kcv-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556228578-8d8948712218?ixlib=rb-4.0.3')] bg-cover bg-center opacity-20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to Transform Your Skin?</h2>
+            <p class="text-gray-300 text-xl mb-10 max-w-2xl mx-auto">Join the KCV revolution today and embrace your natural beauty.</p>
+            <a href="shop.html" class="bg-kcv-gold text-white px-10 py-5 rounded-full text-xl hover:bg-white hover:text-kcv-gold transition shadow-2xl btn-shine inline-block">
+                Order Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-3xl font-serif font-bold text-kcv-gold">KCV</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-kcv-gold transition">Instagram</a>
+                    <a href="#" class="hover:text-kcv-gold transition">Facebook</a>
+                    <a href="#" class="hover:text-kcv-gold transition">TikTok</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 KCV Cream. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - KCV CREAM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kcv-gold': '#D4AF37',
+                        'kcv-cream': '#FAF3E0',
+                        'kcv-dark': '#1A1A1A',
+                        'kcv-accent': '#C5A028',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-kcv-dark bg-white">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold text-kcv-gold">KCV</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-kcv-gold transition">Home</a>
+                <a href="shop.html" class="hover:text-kcv-gold transition">Shop</a>
+                <a href="about.html" class="text-kcv-gold font-bold transition">About</a>
+                <a href="contact.html" class="hover:text-kcv-gold transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-kcv-dark focus:outline-none" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-b absolute w-full" id="mobile-menu">
+            <div class="flex flex-col p-4 space-y-4 text-center">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html" class="text-kcv-gold">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-[60vh] flex items-center justify-center relative">
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3')] bg-cover bg-center">
+        </div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative text-center text-white px-6" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4">The Essence of Purity</h1>
+            <p class="text-xl md:text-2xl font-light italic">"Beauty begins the moment you decide to be yourself."</p>
+        </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="py-20 bg-kcv-cream">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <h2 class="text-4xl font-serif font-bold text-kcv-dark mb-6">Our Journey</h2>
+                <div class="space-y-6 text-gray-700 leading-relaxed">
+                    <p>
+                        KCV Cream was born from a simple belief: nature holds the key to timeless beauty. Founded in
+                        2020 by a team of dermatologists and ayurvedic experts, we set out to create a formula that
+                        honors ancient traditions while embracing modern science.
+                    </p>
+                    <p>
+                        We traveled across the globe to source the finest saffron from Kashmir, sandalwood from Mysore,
+                        and organic shea butter from Ghana. Each jar of KCV Cream is a testament to our commitment to
+                        quality.
+                    </p>
+                    <p>
+                        Today, KCV is more than a brand; it's a movement towards conscious beauty. We are cruelty-free,
+                        sustainable, and dedicated to empowering women to feel confident in their own skin.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1542385151-efd9000a8a6d?ixlib=rb-4.0.3"
+                    alt="Natural Ingredients"
+                    class="rounded-lg shadow-2xl rotate-2 hover:rotate-0 transition duration-500 border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-serif font-bold text-kcv-dark mb-16" data-aos="fade-up">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-8 border border-gray-100 rounded-xl hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-kcv-cream rounded-full flex items-center justify-center mx-auto mb-6 text-kcv-gold">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Transparency</h3>
+                    <p class="text-gray-600">We list every ingredient because you deserve to know exactly what touches
+                        your skin.</p>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-xl hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-kcv-cream rounded-full flex items-center justify-center mx-auto mb-6 text-kcv-gold">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sustainability</h3>
+                    <p class="text-gray-600">From recyclable glass jars to ethically sourced botanicals, we respect the
+                        planet.</p>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-xl hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-kcv-cream rounded-full flex items-center justify-center mx-auto mb-6 text-kcv-gold">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Compassion</h3>
+                    <p class="text-gray-600">Beauty should never come at a cost to others. We are 100% cruelty-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-sm text-gray-400">
+            <p>&copy; 2024 KCV Cream. Our story continues with you.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
